@@ -233,3 +233,43 @@ footer {
     height: 220px;
   }
 }
+
+/* Premium Reveal Animation */
+
+section {
+  opacity: 0;
+  transform: translateY(35px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hero {
+  opacity: 1;
+  transform: none;
+}
+
+.btn {
+  transition: all 0.35s ease;
+}
+
+.projects article {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+::selection {
+  background: #ff3030;
+  color: white;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  section {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
